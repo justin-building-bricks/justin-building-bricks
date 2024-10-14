@@ -33,6 +33,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   streaming_dbt_demo:
+    silver:
+      airline_trips_silver:
+        tags: ["silver"]
+    gold:
+      +tags: ["gold"]
+
 
 vars:
   input_path: '/Volumes/justin_edrington/airlines_source'
