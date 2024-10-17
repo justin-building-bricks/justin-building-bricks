@@ -1,7 +1,8 @@
 {{
     config(
         materialized='streaming_table',
-        tags=["bronze"]
+        tags=["bronze"],
+        grants = {'select': 'dan.lueck@databricks.com'}
     )
 }}
 
